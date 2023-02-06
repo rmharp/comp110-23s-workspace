@@ -7,55 +7,71 @@ secret: str = "python"
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
 YELLOW_BOX: str = "\U0001F7E8"
-index: int = 0
+word_idx: int = 0
 
-while len(word) != 6:
-    word = input("That was not 6 letters! Try again: ")
+while len(word) != len(secret):
+    word = input(f"That was not {len(secret)} letters! Try again: ")
 
-while index < len(secret):
-    if word[index] == secret[index]:
-        a = GREEN_BOX
-        index = index + 1
-    else:
-        if word[index] == secret[index+1]:
-            a = YELLOW_BOX
+
+if word[word_idx] == secret[word_idx]:
+    a = GREEN_BOX
+else:        
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            a = YELLOW_BOX            
         else:
-            if word[index] == secret[index+2]:
-                a = YELLOW_BOX
-            else:
-                if word[index] == secret[index+3]:
-                    a = YELLOW_BOX
-                else:
-                    if word[index] == secret[index+3]:
-                        a = YELLOW_BOX
-                    else:
-                        if word[index] == secret[index+4]:
-                            a = YELLOW_BOX
-                        else:
-                            if word[index] == secret[index+5]:
-                                a = YELLOW_BOX
-                            else:
-                                a = WHITE_BOX
-    if word[1] != secret[1]:
-        b = WHITE_BOX
-    else:
-        b = GREEN_BOX
-    if word[2] != secret[2]:
-        c = WHITE_BOX
-    else:
-        c = GREEN_BOX
-    if word[3] != secret[3]:
-        d = WHITE_BOX
-    else:
-        d = GREEN_BOX
-    if word[4] != secret[4]:
-        e = WHITE_BOX
-    else:
-        e = GREEN_BOX
-    if word[5] != secret[5]:
-        f = WHITE_BOX
-    else:
-        f = GREEN_BOX
+            word_idx = word_idx + 1
+    word_idx = 1
+
+if word[word_idx] == secret[word_idx]:
+    b = GREEN_BOX
+else:        
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            b = YELLOW_BOX            
+        else:
+            word_idx = word_idx + 1
+    word_idx = 2
+
+if word[word_idx] == secret[word_idx]:
+    c = GREEN_BOX
+else:        
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            c = YELLOW_BOX            
+        else:
+            word_idx = word_idx + 1
+    word_idx = 3
+
+if word[word_idx] == secret[word_idx]:
+    d = GREEN_BOX
+else:        
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            d = YELLOW_BOX            
+        else:
+            word_idx = word_idx + 1
+    word_idx = 4
+
+if word[word_idx] == secret[word_idx]:
+    e = GREEN_BOX
+else:        
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            e = YELLOW_BOX            
+        else:
+            word_idx = word_idx + 1
+    word_idx = 5
+
+if word[word_idx] == secret[word_idx]:
+    f = GREEN_BOX
+else:     
+    while word_idx < len(secret):
+        if word[word_idx] == secret[word_idx + 1]:
+            f = YELLOW_BOX            
+        else:
+            word_idx = word_idx + 1
+    word_idx = 5
 
 if len(word) == 6:
     if word == secret:
