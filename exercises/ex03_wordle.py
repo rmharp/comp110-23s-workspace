@@ -1,6 +1,6 @@
 """EX03 - Structured Wordle"""
 
-___author___ = "730470865"
+__author__ = "730470865"
 
 def contains_char(word: str,word_chr: str) -> bool:
     assert len(word_chr) == 1
@@ -50,7 +50,7 @@ def main() -> None:
             turn_num += 1
         else:
             print(f"You won in {turn_num}/6 turns!")
-            exit()
+            return
     print("X/6 - Sorry, try again tomorrow!")
 
 if __name__ == "__main__":
