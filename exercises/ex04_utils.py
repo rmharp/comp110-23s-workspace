@@ -24,5 +24,15 @@ def max(input: list[int]) -> int:
         list_idx += 1
     return max
 
+def is_equal(list1: list, list2: list) -> bool:
+    is_equal: bool = True
+    list_idx: int = 0
+    while list_idx < len(list1):
+        if list1[list_idx] == list2[list_idx] and True:
+            is_equal = True
+        else:
+            is_equal = False
+        list_idx += 1
+    return is_equal
 
-print(max([]))
+print(is_equal([1,0],[1,0]))
