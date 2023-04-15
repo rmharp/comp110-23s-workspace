@@ -1,19 +1,25 @@
-"""EX04 - 'list' Utility Functions"""
+"""EX04 - 'list' Utility Functions."""
 
 __author__ = "730470865"
 
-def all(num_list: list, num: int) -> bool:
+
+def all(num_list: list[int], num: int) -> bool:
+    """Checks if the  list (num_list) contains a number (num)."""
     contains_num: bool = True
     list_idx: int = 0
-    while list_idx < len(num_list) and contains_num == True:
+    if len(num_list) == 0:
+        return False
+    while list_idx < len(num_list) and contains_num:
         if num_list[list_idx] == num:
             contains_num = True
         else:
             contains_num = False
         list_idx += 1
-    return(contains_num)
+    return (contains_num)
+
 
 def max(input: list[int]) -> int:
+    """Searches for the maximum integer of a list (input)."""
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     list_idx: int = 0
@@ -24,15 +30,15 @@ def max(input: list[int]) -> int:
         list_idx += 1
     return max
 
-def is_equal(list1: list, list2: list) -> bool:
+
+def is_equal(list1: list[int], list2: list[int]) -> bool:
+    """Checks if the  first (list1) and second (list2) lists are equal at each index."""
     is_equal: bool = True
     list_idx: int = 0
+    if len(list1) != len(list2):
+        return False
     while list_idx < len(list1):
-        if list1[list_idx] == list2[list_idx] and True:
-            is_equal = True
-        else:
+        if list1[list_idx] != list2[list_idx]:
             is_equal = False
         list_idx += 1
     return is_equal
-
-print(is_equal([1,0],[1,0]))
