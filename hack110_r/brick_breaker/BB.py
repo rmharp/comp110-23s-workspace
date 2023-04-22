@@ -137,7 +137,7 @@ def generate_bricks(rows: int, cols: int):
             bricks.append(brick)
     return bricks
 
-def main():
+def mainBB():
     clock = pygame.time.Clock()
 
     paddle = Paddle(PADDLE_X, PADDLE_Y, PADDLE_WIDTH, PADDLE_HEIGHT, "black")
@@ -220,7 +220,5 @@ def main():
     pygame.quit()
     quit()
 
-
-
 if __name__ == "__main__":
-    main()
+    mainBB()
