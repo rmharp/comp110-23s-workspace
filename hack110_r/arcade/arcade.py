@@ -4,6 +4,9 @@ import random
 import sys
 sys.path.append('hack110_r')
 from brick_breaker.BB import *
+from brick_breaker.BB import main as mainBB
+from chess import *
+from chess.main import main as mainChess
 
 pygame.init()
 
@@ -55,8 +58,7 @@ def select():
             if (GAME_TWO_x <= pos[0] <= GAME_TWO_x + GAME_WIDTH and
                 GAME_TWO_y <= pos[1] <= GAME_TWO_y + GAME_HEIGHT):
                 # Start Chess game
-                #mainChess()
-                pass
+                mainChess()
             # Check if the mouse position is within the bounds of the Brick Breaker button
             elif (GAME_ONE_x <= pos[0] <= GAME_ONE_x + GAME_WIDTH and
                 GAME_ONE_y <= pos[1] <= GAME_ONE_y + GAME_HEIGHT):
