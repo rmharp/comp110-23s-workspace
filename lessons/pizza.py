@@ -30,3 +30,7 @@ class Pizza:
     def add_toppings(self, num_toppings: int) -> None:
         """Add a certain number of toppings"""
         self.toppings += num_toppings
+
+my_pizza: Pizza = Pizza("large", 0, False)
+my_pizza.add_toppings(2)
+print(my_pizza.price())
