@@ -5,8 +5,9 @@ import sys
 sys.path.append('hack110_r')
 from brick_breaker.BB import *
 from brick_breaker.BB import main as mainBB
-from chess import *
-from chess.main import main as mainChess
+#from chess.chess_constants import *
+#from chess.main import main as mainChess
+
 
 pygame.init()
 

@@ -1,7 +1,6 @@
 """ Generates Piece Sprite Groups"""
 
 from chess_sprites import *
-
 from chess_constants import *
 
 
